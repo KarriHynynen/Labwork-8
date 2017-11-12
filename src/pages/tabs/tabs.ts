@@ -1,10 +1,13 @@
-import { Component } from '@angular/core';
+//-- Jonas Kivikoski / 1601557,	Karri Hynynen / 1601547, Kimmo Helminen / 1701401-->
 
+import { Component } from '@angular/core';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AboutPage } from '../about/about';
 import { ContactPage } from '../contact/contact';
 import { HomePage } from '../home/home';
-
+@IonicPage()
 @Component({
+  selector: 'page-tabs',
   templateUrl: 'tabs.html'
 })
 export class TabsPage {
@@ -13,7 +16,7 @@ export class TabsPage {
   tab2Root = AboutPage;
   tab3Root = ContactPage;
 
-  constructor() {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
 
   }
 }
